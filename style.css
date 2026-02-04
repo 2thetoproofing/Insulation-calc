@@ -1,0 +1,146 @@
+/* --- Dark Theme Container --- */
+.calc-container {
+  max-width: 650px;
+  margin: 0 auto !important;
+  padding: 1.5rem;
+  background: #0f1115;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e6e6e6;
+}
+
+/* Neon green title */
+.calc-container h2 {
+  text-align: center;
+  margin-top: 0 !important;
+  margin-bottom: 1rem;
+  color: #8cc63f;
+  font-weight: 600;
+}
+
+/* Labels */
+.calc-container label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #dcdcdc;
+}
+
+/* Inputs */
+.calc-container input[type="text"] {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #1a1d22;
+  color: #e6e6e6;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  box-sizing: border-box;
+}
+
+.calc-container input[type="text"]:focus {
+  border-color: #8cc63f;
+  outline: none;
+}
+
+/* Fieldsets */
+.calc-container fieldset {
+  border: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.calc-container legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #8cc63f;
+}
+
+.calc-container input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* --- Button Styling (Matches Financing Calculator) --- */
+.calc-container .btn {
+  display: inline-block;
+  background: #01bcf2;
+  color: #fff;
+  padding: 0.9rem 1.3rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.calc-container .btn:hover {
+  background: #0199c2;
+}
+
+.calc-container .btn:active {
+  background: #017a9a;
+}
+
+.calc-container .btn:disabled {
+  background: #3a4a55;
+  cursor: not-allowed;
+}
+
+/* Output box */
+.calc-container .output {
+  flex: 1 1 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #1a1d22;
+  border-radius: 8px;
+  border: 1px solid #2a2d33;
+}
+
+.calc-container .output label {
+  margin-bottom: 0.5rem;
+  color: #cfcfcf;
+}
+
+/* Error messages */
+.error-msg {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
+  display: none;
+}
+
+/* Form layout */
+.calc-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* Two-column layout */
+.calc-container label,
+.calc-container fieldset {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 300px;
+}
+
+/* Inline radio labels */
+.calc-container fieldset label {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .calc-container label,
+  .calc-container fieldset {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+}
