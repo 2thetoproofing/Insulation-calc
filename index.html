@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insulation Savings Calculator</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -51,7 +51,19 @@
       <input type="text" name="EficTbx">
     </label>
 
-    <button type="button" class="btn" onclick="Calc()">Calculate Savings</button>
+    <button type="button" class="btn" onclick="Calc()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+           stroke="#8cc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+        <line x1="8" y1="6" x2="16" y2="6"></line>
+        <line x1="9" y1="10" x2="9" y2="10"></line>
+        <line x1="15" y1="10" x2="15" y2="10"></line>
+        <line x1="9" y1="14" x2="9" y2="14"></line>
+        <line x1="15" y1="14" x2="15" y2="14"></line>
+        <line x1="9" y1="18" x2="15" y2="18"></line>
+      </svg>
+      Calculate
+    </button>
 
     <div class="output">
       <label>Annual Savings (CAD):
