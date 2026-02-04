@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insulation Savings Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="calc-container">
+  <h2>Insulation Savings Calculator</h2>
+
+  <form name="InsulForm" onsubmit="return Calc();">
+
+    <label>Area (sq ft):
+      <input type="text" name="AreaTbx">
+      <div class="error-msg" id="areaError">Please enter a valid area (1–20,000).</div>
+    </label>
+
+    <label>Heating Degree Days (HDD):
+      <input type="text" name="HDDTbx">
+      <div class="error-msg" id="hddError">Enter a value between 10–25,000.</div>
+    </label>
+
+    <label>Current R-value:
+      <input type="text" name="CurRTbx">
+      <div class="error-msg" id="curRError">Enter a value between 0.9–400.</div>
+    </label>
+
+    <label>Upgraded R-value:
+      <input type="text" name="NewRTbx">
+      <div class="error-msg" id="newRError">Must be greater than current R and ≤ 400.</div>
+    </label>
+
+    <fieldset>
+      <legend>Select Fuel Type:</legend>
+      <label><input type="radio" name="FuelCbx" onclick="ChangeFuel()" checked> Natural Gas (m³)</label>
+      <label><input type="radio" name="FuelCbx" onclick="ChangeFuel()"> Fuel Oil (L)</label>
+      <label><input type="radio" name="FuelCbx" onclick="ChangeFuel()"> Propane (L)</label>
+      <label><input type="radio" name="FuelCbx" onclick="ChangeFuel()"> Electricity (kWh)</label>
+    </fieldset>
+
+    <label>Fuel Cost:
+      <input type="text" name="FuelCostTbx">
+      <input type="text" name="FuelCostLab" readonly style="border:none; background:transparent; font-weight:bold;">
+    </label>
+
+    <label>Furnace Efficiency (%):
+      <input type="text" name="EficTbx">
+    </label>
+
+    <button type="button" class="btn" onclick="Calc()">Calculate Savings</button>
+
+    <div class="output">
+      <label>Annual Savings (CAD):
+        <input type="text" name="Savings1yrLab" readonly>
+      </label>
+      <label>10-Year Savings (CAD):
+        <input type="text" name="Savings10yrLab" readonly>
+      </label>
+      <label>GHG Reduction (kg CO₂):
+        <input type="text" name="GreenHouseGasLab" readonly>
+      </label>
+    </div>
+
+  </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
