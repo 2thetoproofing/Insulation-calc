@@ -1,4 +1,4 @@
-/* PAGE BACKGROUND (matches finance calculator) */
+/* PAGE BACKGROUND */
 body {
   background: #0a0a0a;
   margin: 0;
@@ -54,7 +54,7 @@ body {
   margin-right: 0.5rem;
 }
 
-/* OUTPUT BOX — keep it visible */
+/* OUTPUT BOX */
 .calc-container .output {
   background: #1a1d22;
   border: 1px solid #2a2d33;
@@ -104,27 +104,33 @@ body {
   }
 }
 
-/* BUTTON — EXACT MATCH TO FINANCE CALCULATOR */
+/* BUTTON — EXACT MATCH TO FINANCE CALCULATOR COLORS */
 .calc-container .btn {
-  background: rgba(140, 198, 63, 0.85); /* neon green w/ transparency */
-  color: #0b0c10;
+  background: #161b0e;               /* unclicked */
+  color: #8cc63f;                    /* neon green text */
   padding: 0.9rem 1.3rem;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   transition: all 0.25s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
+/* Hover */
 .calc-container .btn:hover {
-  background: rgba(140, 198, 63, 1);
-  box-shadow: 0 0 12px rgba(140, 198, 63, 0.6);
+  background: #1f2812;               /* hover color */
+  box-shadow: 0 0 12px rgba(140, 198, 63, 0.4);
+  color: #a6ff5f;                    /* slightly brighter neon */
 }
 
+/* Active (click) */
 .calc-container .btn:active {
-  background: rgba(120, 178, 53, 1);
-  box-shadow: 0 0 6px rgba(140, 198, 63, 0.4);
+  background: #13170b;               /* slightly darker */
+  box-shadow: 0 0 6px rgba(140, 198, 63, 0.25);
 }
